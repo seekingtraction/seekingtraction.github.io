@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #fcfcfc;
+  background: #FFFBED;
   font-size: 16px;
   line-height: 1.6em;
 }
@@ -58,15 +58,20 @@ a {
   position: relative;
   overflow: hidden;
   display: block;
-}
-
-.yosh-logo-img {
-  width: 100%;
   max-width: 260px;
   border-radius: 260px;
   -webkit-border-radius: 260px;
   -moz-border-radius: 260px;
   -o-border-radius: 260px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  max-height: 260px;
+}
+
+.yosh-logo-img {
+  width: 100%;
 }
 
 .yosh-title {

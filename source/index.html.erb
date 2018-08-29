@@ -1,40 +1,24 @@
 ---
 pageable: true
 per_page: 150
+title: Seeking Traction
+summary: Weekly short videos documenting my process as a designer building products and finding customers. I'll be sharing everything I learn about the intersection of marketing, design, and business development. Sign up for updates when new videos are released.
 ---
-
-<section class="home-header">
-  <div class="container">
-    <div class="home-header-content">
-    <a id="yosh-logo" href="http://seekingtraction.com"><img src="/images/joe-laptop.jpg" alt="Joe on a laptop" class="yosh-main-logo yosh-logo-img">
-    </a>
-      <p class="home-description">Hi I’m Joe, and I’m currently working on <a href="https://www.mightyscout.com">MightyScout</a>. You can follow along as I document the experiments we try and the ups and downs of finding customers.</p>
-      <div class="home-social-container">
-          <a href="http://www.twitter.com/Anderson760" class="yosh-contact-meta">
-            <img src="/images/twitter-logo.svg" alt="Instagram logo"/>
-          </a>
-          <a href="http://www.instagram.com/yoshyosh18" class="yosh-contact-meta">
-            <img src="/images/ig-logo.svg" alt="Instagram logo"/>
-          </a>
-          <a href="http://www.youtube.com/pgshock" class="yosh-contact-meta">
-            <img src="/images/youtube-logo.svg" alt="Instagram logo"/>
-          </a>
-          <div class="location-container">
-            <img src="/images/pin.svg" alt="Location pin" />
-            <span>Amsterdam</span>
+<div class="bui-container--center">
+  <div class="bui-grid">
+    <% page_articles.each_with_index do |article, i| %>
+    <div class="bui-grid__column-4@medium">
+      <div class="card grid-card">
+        <% link_to article.path, :class => "card-link" do %>
+          <img class="card-img-top" src="images/<%= article.data.imgname %>" alt="Card image cap">
+          <div class="card-body">
+            <p class="episode-title">Episode #<%= article.data.episode %></p>
+            <h2 class="card-title"><%= article.title %></h2>
+            <p class="card-text"><%= article.data.summary %></p>
           </div>
-        </div>
+        <% end %>
       </div>
-
     </div>
-</section>
-
-<div class="container">
-<% page_articles.each_with_index do |article, i| %>
-  <div class="post-item">
-    <span class="yosh-post-meta"><%= article.date.strftime('%e %b %Y') %></span>
-    <h2><%= link_to article.title, article %></h2>
-    <%= strip_summary article.summary(250) %>
+    <% end %>
   </div>
-<% end %>
 </div>

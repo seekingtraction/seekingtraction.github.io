@@ -16,6 +16,9 @@ gem "middleman-deploy", "~> 2.0.0.pre.alpha"
 gem "nokogiri"
 gem "middleman-syntax"
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem "less"
+gem "sass"
+gem "therubyracer"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

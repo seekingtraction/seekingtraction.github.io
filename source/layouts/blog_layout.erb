@@ -7,9 +7,12 @@
 
     <title><%= current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-    <%= stylesheet_link_tag "normalize" %>
-    <%= stylesheet_link_tag "skeleton" %>
-    <%= stylesheet_link_tag "base" %>
+    <%= stylesheet_link_tag "grid" %>
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="/stylesheets/coming-soon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48894720-1"></script>
     <script>
@@ -22,12 +25,133 @@
 
   </head>
   <body>
-  <div class="container dont-break-out">
-    <div id="main" role="main">
-      <span class="yosh-post-meta"><%= current_article.date.strftime('%e %b %Y') unless current_article.nil? %></span>
-      <h1><%= current_article.title unless current_article.nil? %></h1>
-      <%= yield %>
+  <div class="nav-email-capture acquisition-meta js-acquisition-meta">
+  <button type="email" class="form-control js-newsletter-btn">Enter email for new video updates</button>
+  </div>
+  <div class="full-contain">
+    <div class="masthead js-masthead">
+      <div class="masthead-bg"></div>
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-12 my-auto">
+            <div class="masthead-content text-white py-5 py-md-0">
+              <p class="episode-title half-visible"><% if !current_article.data.episode.nil? %>Episode #<%= current_article.data.episode %><% end %></p>
+              <h1 class="mb-3"><%= current_article.title %></h1>
+              <p class="mb-4"><%= current_article.data.summary %></p>
+              <button class="btn btn-primary action-btn js-watch-btn" type="button">Watch video</button>
+              <a class="btn btn-secondary action-btn" data-scroll href="#transcription">Transcription</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>  
+
+    <div class="social-icons">
+      <ul class="list-unstyled text-center mb-0">
+        <li class="list-unstyled-item ca-social-one">
+          <a href="http://www.twitter.com/Anderson760">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="list-unstyled-item ca-social-two">
+          <a href="http://www.youtube.com/pgshock">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        <li class="list-unstyled-item ca-social-three">
+          <a href="http://www.instagram.com/yoshyosh18">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-video-container">
+      <i class="fas fa-play-circle header-video-play-btn js-header-play-btn js-acquisition-meta"></i>
+      <div class="overlay js-video-preview-meta"></div>
+      <video id="header-video" class="header-video js-looping-video js-video-preview-meta" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <% if !current_article.data.herovideo.nil? %>
+          <source src="<%= current_article.data.herovideo %>" type="video/mp4">
+        <% else %>
+          <source src="https://s3-us-west-1.amazonaws.com/seeking-traction/bg.mp4" type="video/mp4">
+        <% end %>
+      </video>
+      <iframe id="player" class="real-video" src="//www.youtube.com/embed/<%= current_article.data.mainvideo %>?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="container dont-break-out reading-container">
+    <div id="main" role="main">
+      <div id="transcription"></div>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+  <%= partial "newsletter_signup" %>
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/js/in-view.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+
+    setupYoutubeApi();
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+      // if (event.data == YT.PlayerState.PLAYING && !done) {
+      //   setTimeout(stopVideo, 6000);
+      //   done = true;
+      // }
+    }
+    function stopVideo() {
+      player.stopVideo();
+    }
+
+    $(".js-header-play-btn").click(function(ev){
+      startTheaterMode();
+    });
+
+    $(".js-watch-btn").click(function(){
+      startTheaterMode();
+    });
+
+    function setupYoutubeApi(){
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+    function playMainVideo(){
+      player.playVideo();
+    }
+
+    function startTheaterMode(){
+      $(".js-acquisition-meta").addClass("hide-fade-slide");
+      // $(".js-acquisition-meta").addClass("active");
+      $(".js-masthead").parent().addClass("active");
+      $(".js-video-preview-meta").addClass("hide-fade");
+      document.getElementById("header-video").pause();
+      playMainVideo();
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+  </script>
   </body>
 </html>
