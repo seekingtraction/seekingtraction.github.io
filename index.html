@@ -7,49 +7,220 @@
 
     <title>Joseph Anderson - Product Designer -</title>
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
-    <link href="/stylesheets/normalize.css" rel="stylesheet" />
-    <link href="/stylesheets/skeleton.css" rel="stylesheet" />
-    <link href="/stylesheets/base.css" rel="stylesheet" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48894720-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-48894720-1');
-    </script>
+    <link href="/stylesheets/grid.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="stylesheets/coming-soon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   </head>
   <body>
-  <div class="container dont-break-out">
-    <div id="main" role="main">
-      <div id="yosh-head-content">
-        <a id="yosh-logo" href="http://yoshyosh.com"><img src="/images/joesq.jpg" alt="Blog Logo" class="yosh-main-logo yosh-logo-img" style="max-height: 100px;" title="">
-        <img src="/images/confessionbear.jpg" alt="Blog Logo Alternate Confession Bear" class="yosh-alt-logo yosh-logo-img" title="" style="">
+    <div class="full-contain">
+      <div class="masthead js-masthead">
+        <div class="masthead-bg"></div>
+        <div class="container h-100">
+          <div class="row h-100">
+            <div class="col-12 my-auto">
+              <div class="masthead-content text-white">
+                <h1 class="mb-3">Seeking Traction</h1>
+                <p class="mb-5">Weekly short videos documenting my process as a designer building products and finding customers. I'll be sharing everything I learn about the intersection of marketing, design, and business development. Sign up for updates when new videos are released.</p>
+                <button class="btn btn-primary action-btn js-newsletter-btn" type="button">Join newsletter</button>
+                <a class="btn btn-secondary action-btn" data-scroll href="#latest-videos">Latest videos</a>
+                <div class="input-group input-group-newsletter" style="display: none;">
+                  <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Enter email..." aria-describedby="basic-addon">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-icons acquisition-meta js-acquisition-meta">
+  <ul class="list-unstyled text-center mb-0">
+    <li class="list-unstyled-item ca-social-one">
+      <a href="http://www.twitter.com/Anderson760">
+        <i class="fab fa-twitter"></i>
       </a>
-        <p class="yosh-description">Hi there! I'm Joseph Anderson and I'm a Product Designer that's obsessed with SaaS, Rails, Mobile, Marketing, and lentils. I'm currently day dreaming in San Diego, working on <a href="https://www.mightyscout.com">MightyScout</a>, and experimenting with Sales and Marketing from a product design perspective.</p>
-        <div class="yosh-social-container">
-            <a href="http://www.twitter.com/Anderson760" class="yosh-twitter yosh-contact-meta">
-              <svg viewBox="0 0 33 33" width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path fill="#00aced" d="M 32,6.076c-1.177,0.522-2.443,0.875-3.771,1.034c 1.355-0.813, 2.396-2.099, 2.887-3.632 c-1.269,0.752-2.674,1.299-4.169,1.593c-1.198-1.276-2.904-2.073-4.792-2.073c-3.626,0-6.565,2.939-6.565,6.565 c0,0.515, 0.058,1.016, 0.17,1.496c-5.456-0.274-10.294-2.888-13.532-6.86c-0.565,0.97-0.889,2.097-0.889,3.301 c0,2.278, 1.159,4.287, 2.921,5.465c-1.076-0.034-2.088-0.329-2.974-0.821c-0.001,0.027-0.001,0.055-0.001,0.083 c0,3.181, 2.263,5.834, 5.266,6.438c-0.551,0.15-1.131,0.23-1.73,0.23c-0.423,0-0.834-0.041-1.235-0.118 c 0.836,2.608, 3.26,4.506, 6.133,4.559c-2.247,1.761-5.078,2.81-8.154,2.81c-0.53,0-1.052-0.031-1.566-0.092 c 2.905,1.863, 6.356,2.95, 10.064,2.95c 12.076,0, 18.679-10.004, 18.679-18.68c0-0.285-0.006-0.568-0.019-0.849 C 30.007,8.548, 31.12,7.392, 32,6.076z"></path></g></svg>
-            </a>
-            <a href="http://www.dribbble.com/Anderson760" class="yosh-dribbble yosh-contact-meta">
-            <svg viewBox="0 0 33 33" width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path fill="#ea4c89" d="M 23.927,7.073 C 23.712,7.38 21.912,9.799 17.66,11.393 C 15.7,7.793 13.528,4.835 13.198,4.393 C 14.097,4.176 15.035,4.060 16,4.060 C 19.038,4.060 21.815,5.2 23.927,7.073 ZM 16.836,16.123 C 10.669,18.116 7.387,23.55 7.116,24.014 C 5.206,21.894 4.042,19.090 4.042,16.018 C 4.042,15.896 4.044,15.774 4.048,15.653 C 4.571,15.664 10.366,15.738 16.338,13.951 C 16.68,14.621 17.007,15.301 17.307,15.98 C 17.149,16.025 16.992,16.072 16.836,16.123 ZM 16,0C 7.163,0,0,7.163,0,16s 7.163,16, 16,16s 16-7.163, 16-16S 24.837,0, 16,0z M 16,30 C 8.28,30, 2,23.72, 2,16C 2,8.28, 8.28,2, 16,2C 23.72,2, 30,8.28, 30,16 C 30,23.72, 23.72,30, 16,30zM 19.372,14.903 C 19.124,14.32 18.857,13.741 18.579,13.171 C 23,11.366 25.004,8.797 25.256,8.456 C 26.922,10.491 27.93,13.083 27.957,15.905 C 27.563,15.822 23.609,15.020 19.63,15.52 C 19.546,15.316 19.46,15.11 19.372,14.903 ZM 15.35,12.112 C 9.756,13.598 4.829,13.576 4.294,13.569 C 5.070,9.858 7.571,6.774 10.916,5.196 C 11.231,5.629 13.368,8.59 15.35,12.112 ZM 18.041,17.984 C 18.067,17.975 18.094,17.967 18.12,17.958 C 19.799,22.32 20.493,25.977 20.671,27.026 C 19.235,27.638 17.657,27.976 16,27.976 C 13.236,27.976 10.688,27.033 8.66,25.452 C 8.875,25.012 11.296,20.335 18.041,17.984 ZM 20.358,17.405 C 24.106,16.805 27.398,17.787 27.807,17.916 C 27.274,21.244 25.364,24.117 22.681,25.931 C 22.559,25.204 21.922,21.703 20.358,17.405 Z"></path></g></svg>
-            </a>
+    </li>
+    <li class="list-unstyled-item ca-social-two">
+      <a href="http://www.youtube.com/pgshock">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+    <li class="list-unstyled-item ca-social-three">
+      <a href="http://www.instagram.com/yoshyosh18">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+      
+      <div class="header-video-container">
+        <i class="fas fa-play-circle header-video-play-btn js-header-play-btn js-acquisition-meta"></i>
+        <div class="overlay js-video-preview-meta"></div>
+        <video id="header-video" class="header-video js-video-preview-meta" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="https://s3-us-west-1.amazonaws.com/seeking-traction/bg.mp4" type="video/mp4">
+        </video>
+        <iframe id="player" class="real-video" src="//www.youtube.com/embed/QdpdsXKqN4E?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 my-auto">
+            <div class="reading-container intro-block">
+              <p>Hey I'm Joe, and I'm working on a company called MightyScout that makes Instagram influencer marketing tools. I recently moved to Amsterdam after being in San Francisco for 6 years working on startups and teaching designers from Google, Facebook, Dropbox, Pinterest, Lyft, and Uber how to code.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="latest-videos"></div>
+      <div class="bui-container--center">
+  <div class="bui-grid">
+    <div class="bui-grid__column-4@medium">
+      <div class="card grid-card">
+<a href="/early-stage-affiliate-marketing/" class="card-link">          <img class="card-img-top" src="images/episode-3-thumb.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="episode-title">Episode #3</p>
+            <h2 class="card-title">Early stage affiliate marketing</h2>
+            <p class="card-text">We explore an affiliate marketing experiment with an Italian marketer that has an established Instagram community.</p>
+          </div>
+</a>      </div>
+    </div>
+    <div class="bui-grid__column-4@medium">
+      <div class="card grid-card">
+<a href="/building-a-habit-facebook-email-ads/" class="card-link">          <img class="card-img-top" src="images/episode-2-thumb.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="episode-title">Episode #2</p>
+            <h2 class="card-title">Building a habit. Facebook & Email Ads</h2>
+            <p class="card-text">To help keep users active we setup automated emails and retargeting ads to help remind them in the early days.</p>
+          </div>
+</a>      </div>
+    </div>
+    <div class="bui-grid__column-4@medium">
+      <div class="card grid-card">
+<a href="/mightyscout-producthunt-launch/" class="card-link">          <img class="card-img-top" src="images/episode-1-thumb.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="episode-title">Episode #1</p>
+            <h2 class="card-title">MightyScout ProductHunt Launch</h2>
+            <p class="card-text">The moment we launched MightyScout on Product Hunt, what went wrong, and the results of our launch.</p>
+          </div>
+</a>      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+        <!-- MC MODAL -->
+    <div class="mc-modal js-modal" data-dojo-attach-point="modalContainer" style="opacity: 1; visibility: visible;">
+        <div class="mc-closeModal js-close-modal" data-action="close-mc-modal" data-dojo-attach-point="modalClose"></div>
+        <div class="mc-layout__modalContent" style="max-height: 579px; width: 100%; height: 579px;">
+            <!-- Begin MailChimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+              #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; color: #000; }
+              /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+            <form action="https://seekingtraction.us19.list-manage.com/subscribe/post?u=71fd4bf244daa80de8fbedac6&amp;id=3ce45dfb3b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+              <h2>Subscribe to my mailing list to get the latest videos, revenue updates, and unfiltered thoughts on the ups and downs with seeking traction</h2>
+            <div class="mc-field-group">
+              <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+            </label>
+              <input type="email" value="" name="EMAIL" class="required email js-email-field" id="mce-EMAIL">
+            </div>
+            <div class="mc-field-group">
+              <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+            </label>
+              <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+            </div>
+              <div id="mce-responses" class="clear" style="margin-left: 0; padding-left: 0;">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_71fd4bf244daa80de8fbedac6_3ce45dfb3b" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <!--End mc_embed_signup-->
         </div>
     </div>
 
-  <div class="post-item">
-    <span class="yosh-post-meta">24 Mar 2018</span>
-    <h2><a href="/test-article/">Test article</a></h2>
-    
-  </div>
-  <div class="post-item">
-    <span class="yosh-post-meta">16 Nov 2014</span>
-    <h2><a href="/wildcard-might-have-a-bad-time/">Wildcard might have a bad time</a></h2>
-    <p>I’ve been a fan of <a href="http://trywildcard.com/">Wildcard</a> before it launched. The concept of cards on mobile is a very powerful one. There is just so much context when presented that way. It’s also consistent with different forms of content. Think about mobile apps that have top...</p>
-  </div>
+    <!-- MC MODAL OVERLAY -->
+    <div class="mc-modal-bg js-modal" data-dojo-attach-point="modalOverlay" style="opacity: 0.65; visibility: visible;"></div>
 
-    </div>
-  </div>  
+<style>
+.mc-modal-bg{position:fixed;left:0;top:0;z-index:9995;height:100%;width:100%;display:none;background:#000;background-color:#000;opacity:.65;opacity:0}.mc-layout__modalContent{box-shadow:0 2px 4px 0 rgba(0,0,0,.2);display:block;background:#fff;border-radius:6px;height:100%;overflow-y:auto;overflow-x:hidden;position:relative;-webkit-overflow-scrolling:touch}.mc-layout__modalContent iframe{display:block}.mc-closeModal{width:30px;height:30px;background-color:#fff;border-radius:100%;box-shadow:0 2px 2px 0 rgba(0,0,0,.2);cursor:pointer;position:absolute;right:-10px;top:-10px;z-index:2}.mc-closeModal:after,.mc-closeModal:before{background-color:#414141;content:'';position:absolute;left:14px;height:14px;top:8px;width:2px}.mc-closeModal:before{transform:rotate(45deg)}.mc-closeModal:after{transform:rotate(-45deg)}.mc-modal *{box-sizing:border-box}.mc-modal{display:none;z-index:9999;position:fixed;top:15%;bottom:60px;left:0;right:0;margin-left:auto;margin-right:auto;min-height:330px;width:490px;background:0 0;opacity:0}.mc-banner{visibility:hidden;z-index:9998;box-shadow:0 3px 6px rgba(0,0,0,.2);background-color:#fff;width:100%;position:fixed;top:0;left:0}@media only screen and (max-width :768px){.mc-modal,.mc-modal-bg{visibility:hidden}.mc-modal{z-index:9998;top:0;left:0;right:0;width:100%!important;height:100%}.mc-banner{visibility:visible;z-index:9999}.mc-layout__modalContent{border-radius:0;max-height:100%!important}.mc-closeModal{background-color:rgba(255,255,255,.8);box-shadow:none;right:10px;top:10px}}
+</style>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <script src="js/in-view.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+
+      setupYoutubeApi();
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        // if (event.data == YT.PlayerState.PLAYING && !done) {
+        //   setTimeout(stopVideo, 6000);
+        //   done = true;
+        // }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+
+      $(".js-header-play-btn").click(function(ev){
+        $(".js-acquisition-meta").addClass("hide-fade-slide");
+        // $(".js-acquisition-meta").addClass("active");
+        $(".js-masthead").parent().addClass("active");
+        $(".js-video-preview-meta").addClass("hide-fade");
+        document.getElementById("header-video").pause();
+        player.playVideo();
+      });
+
+      function setupYoutubeApi(){
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+    </script>
   </body>
 </html>
