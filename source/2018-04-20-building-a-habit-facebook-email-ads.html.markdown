@@ -7,7 +7,7 @@ imgname: episode-2-thumb.jpg
 summary: To help keep users active we setup automated emails and retargeting ads to help remind them in the early days.
 episode: 2
 herovideo: "https://s3-us-west-1.amazonaws.com/seeking-traction/ep2-teaser.mp4"
-mainvideo: "g-Y6yQcQtok"
+mainvideo: "RycYEJHHeTQ"
 ---
 
 All right we're about two weeks into the product hunt launch so we have a bunch of new users that are on the site using it regularly. The thing we're trying to do, and we should have done this earlier, but we're trying to make sure MightyScout is top of mind with these new users. So when someone uses a brand new tool or new website they can very easily forget about it the same day or within just a few hours because it's not a habit yet. So that's why there's a lot of activation emails and different emails that people send which we've also been doing.

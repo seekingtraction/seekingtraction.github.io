@@ -7,7 +7,7 @@ imgname: episode-1-thumb.jpg
 summary: The moment we launched MightyScout on Product Hunt, what went wrong, and the results of our launch.
 episode: 1
 herovideo: "https://s3-us-west-1.amazonaws.com/seeking-traction/launch-moment-short.mp4"
-mainvideo: "g-Y6yQcQtok"
+mainvideo: "s64bsMqF5xk"
 ---
 
 All right here's the first episode of Seeking Traction, we're gonna go over MightyScout a product I've been working on for a little bit more than a year and our launch on the Product Hunt about a week ago.
